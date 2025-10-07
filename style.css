@@ -1,4 +1,4 @@
-/* RESET */
+/* =================== RESET =================== */
 * {
     margin: 0;
     padding: 0;
@@ -7,21 +7,20 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #f4f4f4;
-    color: #333;
+    background: #111;
+    color: #fff;
 }
 
-/* CONTAINER */
+/* =================== CONTAINER =================== */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* HEADER */
+/* =================== HEADER =================== */
 header {
-    background: #111;
-    color: #fff;
+    background: #1a1a1a;
     padding: 15px 0;
     position: sticky;
     top: 0;
@@ -41,28 +40,29 @@ header {
 }
 
 .logo {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
 }
 
-nav {
+.navbar {
     display: flex;
-    gap: 25px;
+    gap: 20px;
 }
 
-nav a {
+.navbar a {
     color: #fff;
     text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-nav a:hover, nav a.active {
+.navbar a.active,
+.navbar a:hover {
     color: #f4b400;
 }
 
-/* BOTÃO MENU MOBILE */
+/* =================== MENU MOBILE =================== */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -74,11 +74,22 @@ nav a:hover, nav a.active {
     width: 25px;
     height: 3px;
     background: #fff;
-    border-radius: 3px;
+    border-radius: 2px;
     transition: all 0.3s;
 }
 
-/* HERO */
+/* Efeito X */
+.menu-toggle.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* =================== HERO =================== */
 .hero {
     position: relative;
     background: url('img1.jpg') center/cover no-repeat;
@@ -125,12 +136,10 @@ nav a:hover, nav a.active {
     background: #fff;
 }
 
-/* SERVICES */
-/* NOSSOS SERVIÇOS */
+/* =================== SERVIÇOS =================== */
 .services {
     padding: 80px 0;
     background: #111;
-    color: #fff;
     text-align: center;
 }
 
@@ -183,13 +192,10 @@ nav a:hover, nav a.active {
     box-shadow: 0 15px 30px rgba(244,180,0,0.5);
 }
 
-
-/* GALERIA */
-/* GALERIA */
+/* =================== GALERIA =================== */
 .gallery {
     padding: 80px 0;
     background: #111;
-    color: #fff;
     text-align: center;
 }
 
@@ -203,13 +209,12 @@ nav a:hover, nav a.active {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    justify-items: center;
 }
 
 .gallery .photos img {
     width: 100%;
-    height: 250px; /* altura fixa para uniformizar */
-    object-fit: cover; /* mantém a proporção e corta o excesso */
+    height: 250px;
+    object-fit: cover;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -220,14 +225,10 @@ nav a:hover, nav a.active {
     box-shadow: 0 10px 25px rgba(244,180,0,0.6);
 }
 
-
-/* VISÃO / MISSÃO */
-/* VISÃO / MISSÃO / VALORES MODERNO */
-/* SEÇÃO NOSSA ESSÊNCIA */
+/* =================== VISÃO / MISSÃO / VALORES =================== */
 .vision {
     padding: 80px 0;
     background: linear-gradient(to right, #111, #222);
-    color: #fff;
     text-align: center;
 }
 
@@ -244,7 +245,6 @@ nav a:hover, nav a.active {
     color: #ccc;
 }
 
-/* CARDS */
 .vision-cards {
     display: flex;
     flex-wrap: wrap;
@@ -259,7 +259,7 @@ nav a:hover, nav a.active {
     width: 300px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.5);
     transition: transform 0.4s, box-shadow 0.4s;
-    position: relative;
+    text-align: center;
 }
 
 .vision-card:hover {
@@ -285,9 +285,7 @@ nav a:hover, nav a.active {
     color: #ccc;
 }
 
-
-
-/* WHATSAPP */
+/* =================== WHATSAPP =================== */
 .whatsapp-btn {
     position: fixed;
     bottom: 25px;
@@ -308,78 +306,44 @@ nav a:hover, nav a.active {
     height: 35px;
 }
 
-/* FOOTER */
+/* =================== FOOTER =================== */
 footer {
-    background: #111;
+    background: #1a1a1a;
     color: #ccc;
     text-align: center;
     padding: 20px 0;
 }
 
-/* RESPONSIVO */
-@media (max-width: 768px) {
-    nav {
-        display: none;
-        flex-direction: column;
-        background: #111;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 100%;
-        text-align: center;
-        padding: 20px 0;
-    }
-
-    nav.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-
-    .menu-toggle.open .bar:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-    .menu-toggle.open .bar:nth-child(2) {
-        opacity: 0;
-    }
-    .menu-toggle.open .bar:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
-}
-/* AGENDAMENTO */
+/* =================== AGENDAMENTO =================== */
 .agendamento {
     padding: 80px 0;
-    background: linear-gradient(135deg, #111 40%, #222 100%);
-    color: #fff;
     text-align: center;
 }
 
 .agendamento h2 {
-    font-size: 2.2em;
-    margin-bottom: 10px;
+    color: #f4b400;
+    font-size: 2.5em;
+    margin-bottom: 15px;
 }
 
 .agendamento p {
-    font-size: 1.1em;
-    color: #ddd;
     margin-bottom: 40px;
+    color: #ccc;
 }
 
 .form-agendamento {
-    max-width: 500px;
-    margin: 0 auto;
     background: rgba(255,255,255,0.08);
     padding: 30px;
-    border-radius: 15px;
+    border-radius: 20px;
+    max-width: 500px;
+    margin: 0 auto;
     backdrop-filter: blur(5px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    text-align: left;
 }
 
 .form-group {
     margin-bottom: 20px;
-    text-align: left;
 }
 
 .form-group label {
@@ -392,27 +356,60 @@ footer {
 .form-group input,
 .form-group select {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
+    border-radius: 10px;
     border: none;
-    border-radius: 8px;
-    outline: none;
     font-size: 1em;
 }
 
 .btn-agendar {
-    background: #f4b400;
-    color: #111;
+    width: 100%;
+    padding: 15px;
     border: none;
-    padding: 12px 25px;
-    font-size: 1em;
     border-radius: 25px;
+    background: #f4b400;
+    font-weight: bold;
+    font-size: 1em;
     cursor: pointer;
     transition: 0.3s;
-    width: 100%;
-    font-weight: bold;
 }
 
 .btn-agendar:hover {
     background: #fff;
     color: #000;
+}
+
+/* =================== RESPONSIVO =================== */
+@media (max-width: 768px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100%;
+        background: #1a1a1a;
+        flex-direction: column;
+        padding: 60px 20px;
+        gap: 20px;
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    .navbar.active {
+        right: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .vision-cards,
+    .services .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery .photos {
+        grid-template-columns: 1fr 1fr;
+    }
 }
