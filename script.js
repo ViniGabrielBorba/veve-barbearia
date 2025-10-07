@@ -1,9 +1,13 @@
-const menuToggle = document.getElementById("menu-toggle");
-const navbar = document.querySelector(".navbar");
+// ================= MENU RESPONSIVO =================
+const menuToggle = document.getElementById('menu-toggle');
+const navbar = document.querySelector('.navbar');
 
-menuToggle.addEventListener("click", () => {
-    navbar.classList.toggle("active"); // abre/fecha menu lateral
-    menuToggle.classList.toggle("open"); // anima o X
+menuToggle.addEventListener('click', () => {
+    // alterna a classe active no menu lateral
+    navbar.classList.toggle('active');
+
+    // alterna a classe open no ícone para efeito X
+    menuToggle.classList.toggle('open');
 });
 
 
