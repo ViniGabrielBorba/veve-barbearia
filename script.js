@@ -6,7 +6,7 @@ document.getElementById('bookingForm')?.addEventListener('submit', function(e){
     const time = document.getElementById('time').value;
 
     if(name && date && time){
-        const phoneNumber = "5599999999999"; // coloque seu número
+        const phoneNumber = "5581987378298"; // coloque seu número
         const message = `Olá! Tenho um novo agendamento:\nNome: ${name}\nData: ${date}\nHora: ${time}`;
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
@@ -17,3 +17,4 @@ document.getElementById('bookingForm')?.addEventListener('submit', function(e){
         alert('Preencha todos os campos!');
     }
 });
+
