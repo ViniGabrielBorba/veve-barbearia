@@ -413,3 +413,9 @@ footer {
         grid-template-columns: 1fr 1fr;
     }
 }
+
+    .gallery .photos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
