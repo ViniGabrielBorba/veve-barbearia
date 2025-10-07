@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Moderno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <img src="veve.jpg" alt="Logo Barbearia" class="logo">
+                <h1>Veve Barbearia</h1>
+            </div>
+
+            <!-- Menu -->
+            <nav class="navbar">
+                <a href="index.html" class="active">Início</a>
+                <a href="contato.html" class="btn-highlight">Agendamento</a>
+            </nav>
+
+            <!-- Botão de menu mobile -->
+            <div class="menu-toggle" id="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h2>Estilo que faz a diferença</h2>
+            <p>Transforme seu visual com quem entende de elegância e confiança.</p>
+            <a href="contato.html" class="btn">Agendar Agora</a>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="services">
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="corte1.png" alt="Corte Masculino">
+                    <h3>Corte Masculino</h3>
+                    <p>Precisão e estilo em cada detalhe do seu corte.</p>
+                </div>
+                <div class="card">
+                    <img src="barba.jpeg" alt="Barba">
+                    <h3>Barba</h3>
+                    <p>Modelagem impecável para realçar sua identidade.</p>
+                </div>
+                <div class="card">
+                    <img src="cb.jpg" alt="Combo Cabelo + Barba">
+                    <h3>Combo Cabelo + Barba</h3>
+                    <p>O cuidado completo que seu visual merece.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section class="gallery">
+        <div class="container">
+            <h2>Galeria de Cortes</h2>
+            <div class="photos">
+                <img src="ct1.webp" alt="Corte 1">
+                <img src="ct2.webp" alt="Corte 2">
+                <img src="ct3.webp" alt="Corte 3">
+                <img src="ct4.webp" alt="Corte 4">
+            </div>
+        </div>
+    </section>
+
+    <!-- VISÃO / MISSÃO / VALORES -->
+<section class="vision">
+    <div class="container">
+        <h2>Nossa Essência</h2>
+        <p class="vision-intro">Conheça nossos princípios que guiam cada corte e atendimento.</p>
+        <div class="vision-cards">
+            <div class="vision-card">
+                <div class="icon">🎯</div>
+                <h3>Missão</h3>
+                <p>Proporcionar aos nossos clientes uma experiência completa de cuidado, estilo e bem-estar.</p>
+            </div>
+            <div class="vision-card">
+                <div class="icon">👁️</div>
+                <h3>Visão</h3>
+                <p>Ser referência em barbearia moderna, combinando tradição, inovação e atendimento personalizado.</p>
+            </div>
+            <div class="vision-card">
+                <div class="icon">💎</div>
+                <h3>Valores</h3>
+                <p>Qualidade, respeito, autenticidade e paixão pelo que fazemos.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Barbearia Moderno - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT MENU MOBILE -->
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const navbar = document.querySelector(".navbar");
+
+        menuToggle.addEventListener("click", () => {
+            navbar.classList.toggle("active");
+            menuToggle.classList.toggle("open");
+        });
+    </script>
+</body>
+</html>
