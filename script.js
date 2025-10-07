@@ -1,20 +1,31 @@
+const menuToggle = document.getElementById("menu-toggle");
+const navbar = document.querySelector(".navbar");
+
+menuToggle.addEventListener("click", () => {
+    navbar.classList.toggle("active"); // abre/fecha menu lateral
+    menuToggle.classList.toggle("open"); // anima o X
+});
+
+
+// AGENDAMENTO WHATSAPP
 document.getElementById('bookingForm')?.addEventListener('submit', function(e){
     e.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const date = document.getElementById('date').value;
-    const time = document.getElementById('time').value;
+    const nome = document.getElementById('nome').value.trim();
+    const telefone = document.getElementById('telefone').value.trim();
+    const servico = document.getElementById('servico').value;
+    const data = document.getElementById('data').value;
+    const hora = document.getElementById('hora').value;
 
-    if(name && date && time){
-        const phoneNumber = "5581987378298"; // coloque seu número
-        const message = `Olá! Tenho um novo agendamento:\nNome: ${name}\nData: ${date}\nHora: ${time}`;
-        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    if(nome && telefone && servico && data && hora){
+        const phoneNumber = "5581987378298"; // número sem sinais
+        const message = `Olá! Tenho um novo agendamento:%0ANome: ${nome}%0ATelefone: ${telefone}%0AServiço: ${servico}%0AData: ${data}%0AHora: ${hora}`;
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
         window.open(whatsappUrl, '_blank');
-        document.getElementById('bookingForm').reset();
+        this.reset();
         alert('Agendamento enviado com sucesso!');
     } else {
         alert('Preencha todos os campos!');
     }
 });
-
