@@ -3,7 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbearia Moderno</title>
+    <title>Veve Barbearia - Estilo e Elegância em Cada Corte</title>
+    <meta name="description" content="Barbearia moderna especializada em cortes masculinos, barba e cuidados pessoais. Agende seu horário e transforme seu visual com quem entende de estilo.">
+    <meta name="keywords" content="barbearia, corte masculino, barba, agendamento, estilo, elegância">
+    <meta name="author" content="Veve Barbearia">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vevebarbearia.com/">
+    <meta property="og:title" content="Veve Barbearia - Estilo e Elegância em Cada Corte">
+    <meta property="og:description" content="Transforme seu visual com quem entende de elegância e confiança. Agende seu horário na Veve Barbearia.">
+    <meta property="og:image" content="https://vevebarbearia.com/logo.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://vevebarbearia.com/">
+    <meta property="twitter:title" content="Veve Barbearia - Estilo e Elegância em Cada Corte">
+    <meta property="twitter:description" content="Transforme seu visual com quem entende de elegância e confiança. Agende seu horário na Veve Barbearia.">
+    <meta property="twitter:image" content="https://vevebarbearia.com/logo.webp">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="logo.webp">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,9 +42,10 @@
             </div>
 
             <!-- Menu -->
-            <nav class="navbar">
+            <nav class="navbar" id="navbar">
                 <a href="index.html" class="active">Início</a>
-                <a href="contato.html" class="btn-highlight">Agendamento</a>
+                <a href="serviços.html">Serviços</a>
+                <a href="contato.html">Agendamento</a>
             </nav>
 
             <!-- Botão de menu mobile -->
@@ -32,47 +59,92 @@
 
     <!-- HERO -->
     <section class="hero">
-        <div class="overlay"></div>
         <div class="hero-content">
             <h2>Estilo que faz a diferença</h2>
             <p>Transforme seu visual com quem entende de elegância e confiança.</p>
-            <a href="contato.html" class="btn">Agendar Agora</a>
+            <div class="hero-buttons">
+                <a href="contato.html" class="btn">Agendar Agora</a>
+                <a href="#services" class="btn-secondary">Ver Serviços</a>
+            </div>
         </div>
     </section>
 
     <!-- SERVIÇOS -->
-    <section class="services">
+    <section class="services" id="services">
         <div class="container">
             <h2>Nossos Serviços</h2>
+            <p>Oferecemos os melhores serviços para cuidar do seu visual com qualidade e estilo</p>
             <div class="cards">
-                <div class="card">
-                    <img src="corte1.png" alt="Corte Masculino">
+                <div class="card fade-in-up">
+                    <div class="card-icon">✂️</div>
+                    <img src="corte1.png" alt="Corte Masculino" loading="lazy">
                     <h3>Corte Masculino</h3>
-                    <p>Precisão e estilo em cada detalhe do seu corte.</p>
+                    <p>Precisão e estilo em cada detalhe do seu corte. Utilizamos técnicas modernas e equipamentos de última geração para garantir um resultado impecável que realça sua personalidade.</p>
+                    <div class="card-features">
+                        <span class="feature">Técnicas Modernas</span>
+                        <span class="feature">Equipamentos Premium</span>
+                        <span class="feature">Consultoria de Estilo</span>
+                    </div>
+                    <div class="card-price">A partir de R$ 35</div>
                 </div>
-                <div class="card">
-                    <img src="barba.jpeg" alt="Barba">
+                <div class="card fade-in-up delay-1">
+                    <div class="card-icon">🧔</div>
+                    <img src="barba.jpeg" alt="Barba" loading="lazy">
                     <h3>Barba</h3>
-                    <p>Modelagem impecável para realçar sua identidade.</p>
+                    <p>Modelagem impecável para realçar sua identidade. Cuidado especial para cada tipo de barba, com produtos de qualidade e técnicas profissionais para um acabamento perfeito.</p>
+                    <div class="card-features">
+                        <span class="feature">Modelagem Personalizada</span>
+                        <span class="feature">Produtos Premium</span>
+                        <span class="feature">Hidratação Inclusa</span>
+                    </div>
+                    <div class="card-price">A partir de R$ 25</div>
                 </div>
-                <div class="card">
-                    <img src="cb.jpg" alt="Combo Cabelo + Barba">
-                    <h3>Combo Cabelo + Barba</h3>
-                    <p>O cuidado completo que seu visual merece.</p>
+                <div class="card fade-in-up delay-2">
+                    <div class="card-icon">💎</div>
+                    <img src="cb.jpg" alt="Combo Cabelo + Barba" loading="lazy">
+                    <h3>Combo Completo</h3>
+                    <p>O cuidado completo que seu visual merece. Corte + barba com desconto especial, incluindo hidratação e finalização. A experiência completa de transformação.</p>
+                    <div class="card-features">
+                        <span class="feature">Corte + Barba</span>
+                        <span class="feature">Hidratação Inclusa</span>
+                        <span class="feature">Desconto Especial</span>
+                    </div>
+                    <div class="card-price">Apenas R$ 50</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- GALERIA -->
-    <section class="gallery">
+    <section class="gallery" id="gallery">
         <div class="container">
             <h2>Galeria de Cortes</h2>
+            <p>Confira alguns dos nossos melhores trabalhos</p>
             <div class="photos">
-                <img src="ct1.webp" alt="Corte 1">
-                <img src="ct2.webp" alt="Corte 2">
-                <img src="ct3.webp" alt="Corte 3">
-                <img src="ct4.webp" alt="Corte 4">
+                <div class="gallery-item">
+                    <img src="ct1.webp" alt="Corte 1" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Ver Detalhes</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="ct2.webp" alt="Corte 2" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Ver Detalhes</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="ct3.webp" alt="Corte 3" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Ver Detalhes</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="ct4.webp" alt="Corte 4" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span>Ver Detalhes</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -108,19 +180,118 @@
     <!-- FOOTER -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Barbearia Moderno - Todos os direitos reservados.</p>
+            <p>&copy; 2025 Veve Barbearia - Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <!-- SCRIPT MENU MOBILE -->
-    <script>
-        const menuToggle = document.getElementById("menu-toggle");
-        const navbar = document.querySelector(".navbar");
+    <!-- BOTÃO WHATSAPP -->
+    <a href="https://wa.me/5581994201799?text=Olá! Gostaria de agendar um horário na Veve Barbearia." 
+       class="whatsapp-btn" 
+       aria-label="Agendar via WhatsApp"
+       target="_blank" 
+       rel="noopener noreferrer">
+    </a>
 
-        menuToggle.addEventListener("click", () => {
-            navbar.classList.toggle("active");
-            menuToggle.classList.toggle("open");
+    <!-- SCRIPTS -->
+    <script>
+        // Menu Mobile - Versão Garantida
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('=== INICIANDO MENU MOBILE ===');
+            
+            const menuToggle = document.getElementById('menu-toggle');
+            const navbar = document.getElementById('navbar');
+            
+            console.log('Menu toggle:', menuToggle);
+            console.log('Navbar:', navbar);
+            
+            if (menuToggle && navbar) {
+                console.log('✅ Elementos encontrados');
+                
+                menuToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log('🖱️ Menu clicado!');
+                    
+                    navbar.classList.toggle('active');
+                    menuToggle.classList.toggle('open');
+                    
+                    console.log('Menu ativo:', navbar.classList.contains('active'));
+                });
+                
+                // Fecha ao clicar em link
+                navbar.addEventListener('click', function(e) {
+                    if (e.target.tagName === 'A') {
+                        console.log('🔗 Fechando menu');
+                        navbar.classList.remove('active');
+                        menuToggle.classList.remove('open');
+                    }
+                });
+                
+                console.log('✅ Menu configurado com sucesso');
+            } else {
+                console.error('❌ Elementos não encontrados');
+            }
+
+            // Header scroll effect
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all fade-in-up elements
+            document.querySelectorAll('.fade-in-up').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+
+            // Gallery lightbox effect
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    if (img) {
+                        // Simple alert for demo - you can implement a proper lightbox
+                        alert('Imagem: ' + img.alt);
+                    }
+                });
+            });
         });
     </script>
+    <script src="script.js"></script>
 </body>
 </html>
+
+
