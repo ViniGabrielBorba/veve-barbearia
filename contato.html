@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agendamento - Veve Barbearia</title>
+    <meta name="description" content="Agende seu horário na Veve Barbearia. Funcionamos de terça a sábado, das 09h às 18h. Corte masculino, barba e cuidados pessoais.">
+    <link rel="icon" type="image/webp" href="logo.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,8 +21,9 @@
             </div>
 
             <!-- Menu -->
-            <nav class="navbar">
+            <nav class="navbar" id="navbar">
                 <a href="index.html">Início</a>
+                <a href="serviços.html">Serviços</a>
                 <a href="contato.html" class="active btn-highlight">Agendamento</a>
             </nav>
 
@@ -30,57 +36,177 @@
         </div>
     </header>
 
-    <!-- SEÇÃO DE AGENDAMENTO -->
-    <section class="agendamento">
+    <!-- HERO CONTATO -->
+    <section class="contact-hero">
         <div class="container">
-            <h2>Agende Seu Horário</h2>
-            <p>Escolha o melhor dia e horário para cuidar do seu visual conosco.</p>
+            <div class="hero-content">
+                <h1>Entre em Contato</h1>
+                <p>Agende seu horário e transforme seu visual com quem entende de estilo</p>
+            </div>
+        </div>
+    </section>
 
-            <form id="bookingForm" class="form-agendamento">
-                <div class="form-group">
-                    <label for="nome">Nome completo</label>
-                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+    <!-- INFORMAÇÕES DE CONTATO -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card fade-in-up">
+                    <div class="info-icon">📍</div>
+                    <h3>Endereço</h3>
+                    <p>Rua das Flores, 123<br>Centro - Recife/PE<br>CEP: 50000-000</p>
+                </div>
+                <div class="info-card fade-in-up delay-1">
+                    <div class="info-icon">📞</div>
+                    <h3>Telefone</h3>
+                    <p>(81) 99999-9999<br>WhatsApp disponível<br>Segunda a Sábado</p>
+                </div>
+                <div class="info-card fade-in-up delay-2">
+                    <div class="info-icon">🕒</div>
+                    <h3>Horário de Funcionamento</h3>
+                    <p>Terça a Sábado<br>09h às 13h<br>14h às 18h</p>
+                </div>
+                <div class="info-card fade-in-up delay-3">
+                    <div class="info-icon">✉️</div>
+                    <h3>E-mail</h3>
+                    <p>contato@vevebarbearia.com<br>Resposta em até 24h<br>Atendimento personalizado</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULÁRIO DE AGENDAMENTO -->
+    <section class="agendamento" id="agendamento">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>Agende Seu Horário</h2>
+                    <p>Preencha o formulário abaixo e entraremos em contato para confirmar seu agendamento</p>
                 </div>
 
-                <div class="form-group">
-                    <label for="telefone">Telefone (WhatsApp)</label>
-                    <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
-                </div>
+                <form id="formAgendamento" class="form-agendamento">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nome">Nome completo *</label>
+                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone (WhatsApp) *</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="(81) 99999-9999" required>
+                        </div>
+                    </div>
 
-                <div class="form-group">
-                    <label for="servico">Serviço</label>
-                    <select id="servico" name="servico" required>
-                        <option value="">Selecione</option>
-                        <option value="Corte Masculino">Corte Masculino</option>
-                        <option value="Barba">Barba</option>
-                        <option value="Cabelo + Barba">Cabelo + Barba</option>
-                    </select>
-                </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="servico">Serviço desejado *</label>
+                            <select id="servico" name="servico" required>
+                                <option value="">Selecione um serviço</option>
+                                <option value="Corte Masculino">✂️ Corte Masculino - R$ 35</option>
+                                <option value="Barba">🧔 Barba - R$ 25</option>
+                                <option value="Combo Completo">💎 Combo Completo - R$ 50</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="data">Data preferida *</label>
+                            <input type="date" id="data" name="data" required>
+                        </div>
+                    </div>
 
-                <div class="form-group">
-                    <label for="data">Data</label>
-                    <input type="date" id="data" name="data" required>
-                </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="hora">Horário preferido *</label>
+                            <input type="time" id="hora" name="hora" min="09:00" max="18:00" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="observacoes">Observações</label>
+                            <textarea id="observacoes" name="observacoes" placeholder="Alguma observação especial? (opcional)" rows="3"></textarea>
+                        </div>
+                    </div>
 
-                <div class="form-group">
-                    <label for="hora">Horário</label>
-                    <input type="time" id="hora" name="hora" required>
-                </div>
+                    <div class="form-footer">
+                        <button type="submit" class="btn-agendar">
+                            <span>Agendar Horário</span>
+                            <span class="btn-icon">📅</span>
+                        </button>
+                        <p class="form-note">* Campos obrigatórios</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 
-                <button type="submit" class="btn-agendar">Agendar</button>
-            </form>
+    <!-- MAPA E LOCALIZAÇÃO -->
+    <section class="map-section">
+        <div class="container">
+            <h2>Nossa Localização</h2>
+            <p>Venha nos visitar! Estamos localizados no centro da cidade</p>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <div class="map-icon">🗺️</div>
+                    <h3>Mapa Interativo</h3>
+                    <p>Rua das Flores, 123 - Centro</p>
+                    <a href="https://maps.google.com" target="_blank" class="btn-map">Ver no Google Maps</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Barbearia Moderno - Todos os direitos reservados.</p>
+            <p>&copy; 2025 Veve Barbearia - Todos os direitos reservados.</p>
         </div>
     </footer>
 
+    <!-- BOTÃO WHATSAPP -->
+    <a href="https://wa.me/5581994201799?text=Olá! Gostaria de agendar um horário na Veve Barbearia." 
+       class="whatsapp-btn" 
+       aria-label="Agendar via WhatsApp"
+       target="_blank" 
+       rel="noopener noreferrer">
+    </a>
+
     <!-- JS -->
+    <script>
+        // Menu Mobile - Versão Garantida
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('=== INICIANDO MENU MOBILE ===');
+            
+            const menuToggle = document.getElementById('menu-toggle');
+            const navbar = document.getElementById('navbar');
+            
+            console.log('Menu toggle:', menuToggle);
+            console.log('Navbar:', navbar);
+            
+            if (menuToggle && navbar) {
+                console.log('✅ Elementos encontrados');
+                
+                menuToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log('🖱️ Menu clicado!');
+                    
+                    navbar.classList.toggle('active');
+                    menuToggle.classList.toggle('open');
+                    
+                    console.log('Menu ativo:', navbar.classList.contains('active'));
+                });
+                
+                // Fecha ao clicar em link
+                navbar.addEventListener('click', function(e) {
+                    if (e.target.tagName === 'A') {
+                        console.log('🔗 Fechando menu');
+                        navbar.classList.remove('active');
+                        menuToggle.classList.remove('open');
+                    }
+                });
+                
+                console.log('✅ Menu configurado com sucesso');
+            } else {
+                console.error('❌ Elementos não encontrados');
+            }
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
+
 
